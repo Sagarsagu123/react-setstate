@@ -6,7 +6,9 @@ import React, { Component } from 'react'
     
       this.state = {
          message : "hello brother"
+
       }
+      this.clickHandler=this.clickHandler.bind(this)
 
     }
     clickHandler(){
@@ -19,14 +21,15 @@ import React, { Component } from 'react'
     return (
       <div>
         <div> {this.state.message}</div>
-         {/* <button onClick={this.clickHandler.bind}>
+         {/* <button onClick={this.clickHandler.bind(this)}> touch me </button > */}
+
+       
+           {/* <button onClick={()=>this.clickHandler()}>
         touch me
         </button > */}
-           <button onClick={()=>this.clickHandler()}>
-        touch me
-        </button >
+<button onClick={this.clickHandler}> touch me </button >
         </div>
-    )
+    )  
   }
 }
 
